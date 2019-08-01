@@ -22,6 +22,7 @@ after_success:
   - docker push bkuhlen73/multi-server
   - docker push bkuhlen73/multi-worker
 
+  
 #deploy:
 #  provider: elasticbeanstalk
 #  region: "eu-west-1"
