@@ -7,7 +7,7 @@ before_install:
   - docker build -t bkuhlen73/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run -e CI=true bkuhlen73/react-test npm run test
+  - docker run -e CI=true bkuhlen73/react-test npm test
 
 after_success:
   - docker build -t bkuhlen73/multi-client  ./client
@@ -22,7 +22,7 @@ after_success:
   - docker push bkuhlen73/multi-server
   - docker push bkuhlen73/multi-worker
 
-  
+
 #deploy:
 #  provider: elasticbeanstalk
 #  region: "eu-west-1"
